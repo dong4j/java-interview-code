@@ -1,5 +1,7 @@
 package info.dong4j.interview.reflect;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
@@ -43,8 +45,8 @@ public class CreateInstance {
      * @throws IllegalAccessException the illegal access exception
      * @throws InstantiationException the instantiation exception
      */
-    static Object classNewInstance(Class clz) throws IllegalAccessException,
-                                                     InstantiationException {
+    private static Object classNewInstance(@NotNull Class clz) throws IllegalAccessException,
+                                                                      InstantiationException {
         return clz.newInstance();
     }
 
@@ -58,10 +60,11 @@ public class CreateInstance {
      * @throws InvocationTargetException the invocation target exception
      * @throws InstantiationException    the instantiation exception
      */
-    static Object constructorNewInstance() throws NoSuchMethodException,
-                                                  IllegalAccessException,
-                                                  InvocationTargetException,
-                                                  InstantiationException {
+    @NotNull
+    private static Object constructorNewInstance() throws NoSuchMethodException,
+                                                          IllegalAccessException,
+                                                          InvocationTargetException,
+                                                          InstantiationException {
         // 获取String所对应的Class对象
         Class<?> c = String.class;
         // 获取String类带一个String参数的构造器
