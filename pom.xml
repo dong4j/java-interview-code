@@ -14,7 +14,7 @@
 
     <properties>
         <slf4j.version>1.7.25</slf4j.version>
-        <log4j.version>2.8.2</log4j.version>
+        <log4j.version>2.16.0</log4j.version>
         <lombok.version>1.18.4</lombok.version>
         <disruptor.version>3.3.4</disruptor.version>
         <java.version>1.7</java.version>
